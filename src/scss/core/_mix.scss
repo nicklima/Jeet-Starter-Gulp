@@ -1,0 +1,58 @@
+// ==========================================================================
+// MIXINGS
+// Definião de todos os @mixings do projeto
+// Não remover para não causar crash no SASS
+// ==========================================================================
+
+// -----------------------------------------------------------
+// BEM - https://en.bem.info/method/
+// Estruturação do CSS em BEM
+// -----------------------------------------------------------
+
+@mixin element($element) {
+    &__#{$element} {
+        @content;
+    }
+}
+
+@mixin modifier($modifier) {
+    &--#{$modifier} {
+        @content;
+    }
+}
+
+@mixin e($element) {
+    @include element($element)  {
+        @content;
+    }
+}
+
+@mixin m($modifier) {
+    @include modifier($modifier) {
+        @content;
+    }
+}
+
+// -----------------------------------------------------------
+// RESPONSIVO
+// Regras das Media QUeries para responsivo
+// -----------------------------------------------------------
+
+$break-small: 767px;
+$break-medium: 1023px;
+$break-large: 1400px;
+
+@mixin respond-to($media) {
+  @if $media == max {
+    @media only screen and (max-width: $break-large) { @content; }
+  }
+  @if $media == xs {
+    @media only screen and (max-width: $break-small) { @content; }
+  }
+  @else if $media == sm {
+    @media only screen and (min-width: $break-small + 1) and (max-width: $break-medium) { @content; }
+  }
+  @else if $media == md {
+    @media only screen and (min-width: $break-medium + 1) and (max-width: $break-large - 1) { @content; }
+  }
+}

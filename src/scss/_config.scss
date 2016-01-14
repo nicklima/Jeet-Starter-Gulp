@@ -1,0 +1,29 @@
+//==============================
+// LIBS
+// Importação dos arquivos do Grid, Normalize
+//==============================
+
+//Reset - https://necolas.github.io/normalize.css/
+@import 'core/lib/normalize/normalize'; 
+
+//Grid - http://jeet.gs
+@import 'core/lib/jeet/index'; 
+
+//==============================
+// CORE
+//==============================
+
+//VARIÁVEIS
+//Define as variáveis do projeto
+@import 'core/variaveis'; 
+
+//MIXINGS
+//Conjunto de Mixxings SASS
+@import 'core/mix'; 
+
+//==============================
+// Index Modulos
+//==============================
+
+// Grids
+@import 'modulos/grid';
