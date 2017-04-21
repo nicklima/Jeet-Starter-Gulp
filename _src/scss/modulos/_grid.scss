@@ -18,6 +18,4 @@
 	}
 }
 
-@if($grid == 'true') {
-	@include grids($global-div);
-}
+@include grids($global-div);
