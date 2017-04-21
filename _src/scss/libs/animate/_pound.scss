@@ -1,0 +1,9 @@
+@keyframes pound {
+    from { transform: none; }
+    50% { transform: scale(1.3); }
+    to { transform: none; }
+}
+
+.pound {
+    animation-name: pound;
+}

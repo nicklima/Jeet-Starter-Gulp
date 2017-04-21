@@ -1,0 +1,79 @@
+// ==========================================================================
+// MIXINGS
+// Definião de todos os @mixings do projeto
+// Não remover para não causar crash no SASS
+// ==========================================================================
+
+// -----------------------------------------------------------
+// JEET
+// An alias for the column mixin.
+// @param [$args...] - All arguments get passed through to column().
+// -----------------------------------------------------------
+
+@mixin col($args...) {
+  @include column($args...);
+}
+
+// -----------------------------------------------------------
+// BEM - https://en.bem.info/method/
+// Estruturação do CSS em BEM
+// -----------------------------------------------------------
+
+@mixin element($element, $parent: false) {
+    @if $parent != false {
+      #{$parent}__#{$element} {
+        @content;
+      }
+    } @else {
+      &__#{$element} {
+        @content;
+      }
+    }
+}
+
+@mixin modifier($modifier) {
+    &--#{$modifier} {
+        @content;
+    }
+}
+
+@mixin e($element, $parent: false) {
+    @include element($element, $parent)  {
+        @content;
+    }
+}
+
+@mixin m($modifier) {
+    @include modifier($modifier) {
+        @content;
+    }
+}
+
+// -----------------------------------------------------------
+// RESPONSIVO
+// Regras das Media QUeries para responsivo
+// -----------------------------------------------------------
+
+$break-mobile: 568px;
+$break-small: 767px;
+$break-medium: 1023px;
+$break-large: 1400px;
+
+@mixin respond-to($media) {
+
+  @if $media == xs {
+    @media only screen and (min-width: $break-mobile) { @content; }
+  }
+
+  @else if $media == sm {
+    @media only screen and (min-width: $break-small) { @content; }
+  }
+
+  @else if $media == md {
+    @media only screen and (min-width: $break-medium) { @content; }
+  }
+
+  @else if $media == lg{
+    @media only screen and ( min-width: $break-large){ @content; }
+  }
+}

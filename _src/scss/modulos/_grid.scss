@@ -1,0 +1,23 @@
+@mixin grids($div) {
+	.#{$div} {
+	    @include grid;
+	}
+}
+
+@mixin grid {
+
+	@include center(90%);
+
+	@include respond-to(md) {
+		@include center($lg-md);
+	}
+
+	@include respond-to(lg) {
+		// @include center($lg-xs);
+		@include center($lg-max);
+	}
+}
+
+@if($grid == 'true') {
+	@include grids($global-div);
+}

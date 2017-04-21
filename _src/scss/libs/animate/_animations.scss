@@ -1,0 +1,109 @@
+/*!
+ * animate.css -http://daneden.me/animate
+ * Version - 3.5.1
+ * Licensed under the MIT license - http://opensource.org/licenses/MIT
+ * Copyright (c) 2016 Daniel Eden
+ */
+
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+
+    &.infinite {
+      -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+    }
+
+    &.hinge {
+      -webkit-animation-duration: 2s;
+      animation-duration: 2s;
+    }
+
+    &.flipOutX,
+    &.flipOutY,
+    &.bounceIn,
+    &.bounceOut {
+      -webkit-animation-duration: .75s;
+      animation-duration: .75s;
+    }
+}
+
+@import "bounce";
+@import "bounceIn";
+@import "bounceInDown";
+@import "bounceInLeft";
+@import "bounceInRight";
+@import "bounceInUp";
+@import "bounceOut";
+@import "bounceOutDown";
+@import "bounceOutLeft";
+@import "bounceOutRight";
+@import "bounceOutUp";
+@import "fadeIn";
+@import "fadeInDown";
+@import "fadeInDownBig";
+@import "fadeInLeft";
+@import "fadeInLeftBig";
+@import "fadeInRight";
+@import "fadeInRightBig";
+@import "fadeInUp";
+@import "fadeInUpBig";
+@import "fadeOut";
+@import "fadeOutDown";
+@import "fadeOutDownBig";
+@import "fadeOutLeft";
+@import "fadeOutLeftBig";
+@import "fadeOutRight";
+@import "fadeOutRightBig";
+@import "fadeOutUp";
+@import "fadeOutUpBig";
+@import "flash";
+@import "flip";
+@import "flipInX";
+@import "flipInY";
+@import "flipOutX";
+@import "flipOutY";
+@import "headShake";
+@import "hinge";
+@import "jello";
+@import "lightSpeedIn";
+@import "lightSpeedOut";
+@import "pound";
+@import "pulse";
+@import "rollIn";
+@import "rollOut";
+@import "rotateIn";
+@import "rotateInDownLeft";
+@import "rotateInDownRight";
+@import "rotateInUpLeft";
+@import "rotateInUpRight";
+@import "rotateOut";
+@import "rotateOutDownLeft";
+@import "rotateOutDownRight";
+@import "rotateOutUpLeft";
+@import "rotateOutUpRight";
+@import "rubberBand";
+@import "shake";
+@import "slideInDown";
+@import "slideInLeft";
+@import "slideInRight";
+@import "slideInUp";
+@import "slideOutDown";
+@import "slideOutLeft";
+@import "slideOutRight";
+@import "slideOutUp";
+@import "swing";
+@import "tada";
+@import "wobble";
+@import "zoomIn";
+@import "zoomInDown";
+@import "zoomInLeft";
+@import "zoomInRight";
+@import "zoomInUp";
+@import "zoomOut";
+@import "zoomOutDown";
+@import "zoomOutLeft";
+@import "zoomOutRight";
+@import "zoomOutUp";
